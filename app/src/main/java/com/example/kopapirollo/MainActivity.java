@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         init();
         btnKo.setOnClickListener(this);
+        btnPapir.setOnClickListener(this);
+        btnOllo.setOnClickListener(this);
 
     }
 
@@ -82,10 +85,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             jatekosPontszam++;
             uzenet = "A papir becsomagolta anyádat is, nyertél";
         } else if (gepValasztasa.equals("papir") && jatekosValasztasa.equals("ollo")){
-            gepPontszam++;
+            jatekosPontszam++;
             uzenet = "A papert elvágta az olló, myertel";
         } else if (gepValasztasa.equals("papir") && jatekosValasztasa.equals("ko")){
-            jatekosPontszam++;
+            gepPontszam++;
             uzenet = "A papper becsomizta a kavicsod te csicska, véegd";
         } else if (gepValasztasa.equals("ollo") && jatekosValasztasa.equals("papir")){
             gepPontszam++;
@@ -96,5 +99,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else {
             uzenet = "dontetlen!44!XDD:)";
         }
+
+        textEredmeny.setText(String.format("Gép: %d -  %d Játékos", gepPontszam, jatekosPontszam));
+        Toast.makeText(MainActivity.this, uzenet, Toast.LENGTH_SHORT).show();
     }
 }

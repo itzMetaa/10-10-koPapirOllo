@@ -18,12 +18,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="25dp"
-            android:text="        Gép 0 - 0 Játékos"
+            android:text="Gép 0 - 0 Játékos"
             android:id="@+id/textEredmeny"
             />
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/rock"
             android:id="@+id/imageGep"
@@ -35,8 +35,8 @@
             android:text="Gép Szerint a világ"
             />
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/paper"
             android:id="@+id/imageJatekos"
