@@ -58,5 +58,43 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 imageJatekos.setImageResource(R.drawable.scissors);
                 break;
         }
+        int gepGeneralt = r.nextInt(3);
+        String gepValasztasa = "";
+        switch (gepGeneralt){
+            case 0:
+                gepValasztasa = "ko";
+                imageGep.setImageResource(R.drawable.rock);
+                break;
+            case 1:
+                gepValasztasa = "papir";
+                imageGep.setImageResource(R.drawable.paper);
+                break;
+            case 2:
+                gepValasztasa = "ollo";
+                imageGep.setImageResource(R.drawable.scissors);
+                break;
+        }
+        String uzenet = "";
+        if (gepValasztasa.equals("ko") && jatekosValasztasa.equals("ollo")){
+            gepPontszam++;
+            uzenet = "A kő megbaszta az olló pengéit, meghaltál";
+        } else if (gepValasztasa.equals("ko") && jatekosValasztasa.equals("papir")){
+            jatekosPontszam++;
+            uzenet = "A papir becsomagolta anyádat is, nyertél";
+        } else if (gepValasztasa.equals("papir") && jatekosValasztasa.equals("ollo")){
+            gepPontszam++;
+            uzenet = "A papert elvágta az olló, myertel";
+        } else if (gepValasztasa.equals("papir") && jatekosValasztasa.equals("ko")){
+            jatekosPontszam++;
+            uzenet = "A papper becsomizta a kavicsod te csicska, véegd";
+        } else if (gepValasztasa.equals("ollo") && jatekosValasztasa.equals("papir")){
+            gepPontszam++;
+            uzenet = "A ollo elvag pépöir, vesztettél:)";
+        } else if (gepValasztasa.equals("ollo") && jatekosValasztasa.equals("ko")){
+            jatekosPontszam++;
+            uzenet = "A ko elutotte a ollot nyertelc:(:";
+        } else {
+            uzenet = "dontetlen!44!XDD:)";
+        }
     }
 }
