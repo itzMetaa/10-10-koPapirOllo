@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="25dp"
-            android:text="Gép Választása"
+            android:text="Gép Szerint a világ"
             />
         <ImageView
             android:layout_width="100dp"
@@ -45,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="25dp"
-            android:text="Hátékos Választása"
+            android:text="Hátékos jómagadamxd"
             />
         <LinearLayout
             android:layout_width="wrap_content"
@@ -70,12 +70,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="25dp"
-                android:text="Oló"
+                android:text="Olo:)"
                 android:id="@+id/btnOllo"
                 />
 
 
         </LinearLayout>
-
     </LinearLayout>
 </RelativeLayout>
